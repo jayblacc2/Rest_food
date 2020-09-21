@@ -1,0 +1,461 @@
+/* 
+main-color: #e67e22   
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #fff;
+  color: #555;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+/* ------------------------------Reusable Component---------------------------------------------- */
+/*main container centered */
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.p-1 {
+  padding: 0 1%;
+}
+
+.lead {
+  font-size: 90%;
+  line-height: 145%;
+  margin: 20px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.my-1 {
+  margin: 40px 0;
+}
+
+.bg-md {
+  background-color: #f1f1f1;
+}
+/* ------------------------------header---------------------------------------------- */
+header {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../css/img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ------------------------------Nav---------------------------------------------- */
+
+.logo {
+  width: auto;
+  height: 80px;
+  float: left;
+  margin-top: 20px;
+}
+.logo-black {
+  display: none;
+  width: auto;
+  height: 50px;
+  float: left;
+  margin-top: 5px 0;
+}
+.main-nav {
+  float: right;
+  margin-top: 50px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  font-size: 90%;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+  padding: 8px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom-color: #cf6d1f;
+}
+
+/* ------------------------sticky nav------------------------------------------------- */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.986);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  color: #555;
+}
+.sticky .logo {
+  display: none;
+}
+.sticky .logo-black {
+  display: block;
+}
+
+.main-nav {
+  margin-top: 18px;
+}
+
+/* ------------------------------Headins---------------------------------------------- */
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 240%;
+  color: #fff;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+h2:after {
+  /* position: absolute; */
+  content: " ";
+  width: 100px;
+  height: 2px;
+  background-color: #e67e22;
+  display: block;
+  margin: 30px auto;
+}
+
+/*------------------------Paragraph-------------------------------- */
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*--------------------------------- icons------------------------------------ */
+.icon-bg {
+  color: #e67e22;
+  display: block;
+  font-size: 250%;
+  margin-bottom: 10px;
+}
+
+.icon-sm {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+  margin-left: -5px;
+
+  /* align text/icons */
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+/* button styling */
+
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  padding: 10px 30px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 200px;
+  font-weight: 300;
+  border: 1px solid transparent;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+  background-color: #e67e22;
+  margin-right: 20px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  color: #e67e22;
+  border-color: #e67e22;
+}
+
+.btn:hover,
+.btn:active,
+input[type="submit"]:active,
+input[type="submit"]:hover {
+  background-color: #cf6d1f;
+  color: #fff;
+}
+
+/* ------------------------------Meal Gallery---------------------------------------------- */
+
+.section-meals {
+  padding: 0;
+}
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.meal-photo {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.meal-photo img {
+  opacity: 0.6;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.meal-photo img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* ------------------------------How it works---------------------------------------------- */
+
+.section-steps {
+  background-color: #f3f2f2ee;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-bottom: 70px;
+}
+
+.app-screen {
+  width: 40%;
+}
+
+.works-step {
+  margin-bottom: 50px;
+}
+
+.works-step div {
+  color: #e67e22;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #e67e22;
+  text-align: center;
+  padding: 5px;
+  font-size: 150%;
+  float: left;
+  margin-right: 25px;
+}
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+.btn-app img {
+  width: auto;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/*--------------------------------- section-cities ------------------------------------ */
+
+.box img {
+  margin-bottom: 20px;
+}
+
+.city-feature {
+  margin-bottom: 10px;
+}
+
+/* --------------------------Customer-Testimonials--------------------------------- */
+
+.section-testimonials {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../css/img/back-customers.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+blockquote {
+  font-size: 100%;
+  line-height: 145%;
+  padding: 2%;
+  font-style: italic;
+}
+blockquote:before {
+  content: "\201C ";
+  font-size: 300%;
+  position: relative;
+  top: 20px;
+}
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+cite img {
+  width: 15%;
+  border-radius: 50%;
+  margin: 15px 10px;
+  border: 1px solid #e67e22;
+  vertical-align: middle;
+}
+
+/* -----------------------Section Plan------------------------------- */
+
+.plan {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.plan div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 2px 2px #eeeeee;
+}
+.plan div:first-of-type {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.plan div:last-of-type {
+  text-align: center;
+  border: 0;
+}
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #e67e22;
+}
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.plan ul li {
+  padding: 5px 0;
+  margin-right: 10px;
+}
+
+/* -----------------------------Contact form--------------------------------------- */
+.contact {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 7px;
+  border-radius: 3px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+textarea {
+  height: 100px;
+}
+
+input[type="submit"] {
+  color: #ffff;
+}
+
+*:focus {
+  outline: none;
+}
+
+.bg-dark {
+  background-color: #282a32;
+  padding: 5% 0;
+  color: #fff;
+}
